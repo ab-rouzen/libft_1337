@@ -6,7 +6,7 @@
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 16:38:34 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/14 15:58:19 by arouzen          ###   ########.fr       */
+/*   Updated: 2021/11/14 16:53:10 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -16,6 +16,8 @@
 int		ft_isalnum(int c);
 int		ft_isdigit(int c);
 int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr_fd(char *str, int fd);
 void	ft_putchar_fd(char c, int fd);
