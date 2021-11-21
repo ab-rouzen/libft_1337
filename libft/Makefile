@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: re clean
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
@@ -7,7 +7,7 @@ MAIN = prog
 SRCS = ${wildcard *.c}
 BINS = $(SRCS:%.c=%.o)
 
-all : ${MAIN}
+re : ${MAIN}
 	@echo "Umm, you're all set..."
 
 ${MAIN} : ${BINS}

@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 11:02:49 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/20 15:41:36 by arouzen          ###   ########.fr       */
+/*   Created: 2021/11/19 18:20:52 by arouzen           #+#    #+#             */
+/*   Updated: 2021/11/20 16:22:45 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	size_t		i;
-	unsigned char		chr;
-	char	*us;
 
-	chr = c;
-	us = (char *)s;
-	i = 0;
-	if (!n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*substr;
+	char	*ns;
+
+	ns = (char *)s;
+	if (!ns)
 		return (NULL);
-	while (i < n && us[i] != chr)
-		i++;
-	if (us[i] == chr)
-		return (&us[i]);
-	return (NULL);
+	if (start <= ft_strlen(ns))
+	{
+		if (len > ft_strlen(ns))
+			substr = malloc (ft_strlen(ns) + 1);
+		else
+			substr = malloc (len + 1);
+		if (!substr)
+			return (NULL);
+		ft_strlcpy(substr, (const char *)&ns[start], len + 1);
+		return (substr);
+	}
+	substr = malloc(1);
+	substr[0] = '\0';
+	return (substr);
 }

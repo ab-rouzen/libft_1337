@@ -6,11 +6,11 @@
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 11:17:46 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/13 11:19:23 by arouzen          ###   ########.fr       */
+/*   Updated: 2021/11/20 15:43:37 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char* str)
+int	ft_strlen(char *str)
 {
 	int	i;
 

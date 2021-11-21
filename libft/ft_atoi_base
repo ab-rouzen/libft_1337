@@ -1,0 +1,140 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/08/16 19:00:00 by arouzen           #+#    #+#             */
+/*   Updated: 2021/08/21 17:08:43 by arouzen          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putnbr(int nbr, char *base);
+void	scrap(char *str, char *base);
+int		ft_atoi(char *str, char *base);
+int		ft_atoi_base(char *str, char *base);
+
+int		g_minus_count;
+int		g_ear;
+int		g_num_len;
+char	*g_ptr;
+int		g_holder;
+int		g_multiply;
+int		g_rang;
+
+int	str_len(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
+
+int	scrap2(char *str)
+{
+	int	i;
+
+	i = 0;
+	g_minus_count = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == '\r' || str[i] == '\n' || str[i] == '\f')
+		i++;
+	while (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			g_minus_count++;
+	g_ptr = &str[i];
+	return (i);
+}
+
+void	scrap(char *str, char *base)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	i = scrap2(str);
+	while (str[i])
+	{
+		j = 0;
+		while (base[j])
+		{
+			if (str[i] == base[j])
+				break ;
+			j++;
+		}
+		i++;
+		if (!base[j])
+		{
+			i--;
+			break ;
+		}
+	}
+	if (!str[i] || !base[j])
+		i--;
+	g_ear = i;
+}
+
+int	ft_atoi(char *str, char *base)
+{
+	int	i;
+
+	i = 0;
+	g_holder = 0;
+	g_multiply = 1;
+	scrap(str, base);
+	i = g_ear;
+	while (&str[i] >= g_ptr)
+	{
+		g_rang = 0;
+		while (base[g_rang])
+		{
+			if (base[g_rang] == str[i])
+				break ;
+			g_rang++;
+		}
+		g_holder += g_rang * g_multiply;
+		g_multiply *= str_len(base);
+		i--;
+	}
+	if (g_minus_count % 2 == 1)
+		return (-g_holder);
+	return (g_holder);
+}
+
+int	ft_atoi_base(char *str, char *base)
+{
+	int	i;
+	int	check;
+	int	j;
+
+	i = 0;
+	check = 0;
+	while (base[i])
+	{
+		if (base[i] == '+' || base[i] == '-' || base[i] == ' '
+			|| base[i] == '\t' || base[i] == '\v' || base[i] == '\r'
+			|| base[i] == '\n' || base[i] == '\f')
+			check = 1;
+		j = 1;
+		while (base[i + j])
+		{
+			if (base[i] == base[i + j])
+				check = 1;
+			j++;
+		}
+		i++;
+	}
+	if (check == 0 && base[0] && base[1])
+		return (ft_atoi(str, base));
+	return (0);
+}
+/*
+int	main(void)
+{
+	printf("Return is: %d", ft_atoi_base(" ---++-10", "0123456789"));
+	return (0);
+}
+*/

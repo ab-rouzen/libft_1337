@@ -1,30 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/14 11:02:49 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/20 15:41:36 by arouzen          ###   ########.fr       */
+/*   Created: 2021/11/19 15:33:52 by arouzen           #+#    #+#             */
+/*   Updated: 2021/11/19 16:07:38 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	size_t		i;
-	unsigned char		chr;
-	char	*us;
 
-	chr = c;
-	us = (char *)s;
-	i = 0;
-	if (!n)
-		return (NULL);
-	while (i < n && us[i] != chr)
-		i++;
-	if (us[i] == chr)
-		return (&us[i]);
-	return (NULL);
+int	ft_atoipisc(char *str)
+{
+	int	i;
+	long	holder;
+	long	multiply;
+
+	holder = 0;
+	multiply = 1;
+	if (str[0] == '-')
+		i = ft_strlen(str) - 1;
+	else i = ft_strlen(str);
+	while (i > 0)
+	{
+		holder += (str[i] - 48) * multiply;
+		i--;
+		multiply *= 10;
+	}	
+	if (str[0] == '-')
+		return (-holder);
+	return (holder);
 }
+/*
+int	main(void)
+{
+	ft_putnbr_fd(ft_atoi("441"), 1);
+	return (0);
+}
+*/
