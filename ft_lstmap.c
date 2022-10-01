@@ -6,7 +6,7 @@
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 23:27:55 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/27 15:11:20 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/10/01 17:17:41 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,4 @@ void	*f(void *content)
 void	del(void *node)
 {
 	free (node);
-}
-
-int	main(void)
-{
-	t_list	*lst = NULL;
-
-	printf ("%p", ft_lstmap(lst, f, del));
-	while (1);
 }
