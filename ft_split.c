@@ -6,7 +6,7 @@
 /*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 11:44:08 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/27 15:30:55 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/11/20 21:43:59 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char	**ft_split(char const *s, char c)
 	ns = (char *)s;
 	if (!ns)
 		return (NULL);
-	tab = malloc(sizeof(char **) * tabcount(ns, c) + 1);
+	tab = malloc(sizeof(char **) * (tabcount(ns, c) + 1));
 	if (!tab)
 		return (NULL);
 	allo_mem(tab, ns, c);
