@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:04:42 by arouzen           #+#    #+#             */
-/*   Updated: 2022/11/21 18:15:21 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/12/03 22:05:36 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,9 @@ void	ft_lstdelone(t_list *lst, void (*del) (void *));
 void	ft_lstclear(t_list **lst, void (*del) (void *));
 void	ft_lstiter(t_list *lst, void (*f) (void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
+char	*ft_strjoin_alloca(char const *s1, char const *s2, \
+		void*(alloc)(size_t));
+char	*ft_strdup_alloca(const char *src, void *(alloc)(size_t));
+t_list	*ft_lstnew_falloc(void *content, void *(*alloc)(size_t));
 
 #endif
