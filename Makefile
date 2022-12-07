@@ -6,7 +6,7 @@
 #    By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/27 14:16:42 by arouzen           #+#    #+#              #
-#    Updated: 2022/12/03 22:04:40 by arouzen          ###   ########.fr        #
+#    Updated: 2022/12/07 16:59:16 by arouzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ MAND_SRCS = ft_atoi.c ft_bzero.c ft_calloc.c \
 MAND_OBJS = $(MAND_SRCS:%.c=$(BUILD_DIR)%.o)
 BONU_SRCS = ft_lstnew.c ft_lstsize.c ft_lstadd_back.c \
 			ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
-			ft_lstiter.c ft_lstlast.c ft_lstmap.c
+			ft_lstiter.c ft_lstlast.c ft_lstmap.c \
+			ft_lstremove.c
 BONU_OBJS = $(BONU_SRCS:%.c=$(BUILD_DIR)%.o)
 AR = ar
 ARFLAGS = -rs

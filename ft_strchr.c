@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arouzen <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 08:37:32 by arouzen           #+#    #+#             */
-/*   Updated: 2021/11/27 14:28:50 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/12/07 17:03:32 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strchr(const char *s, int c)
 	char	nc;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	us = (char *)s;
 	nc = (char)c;
 	while (us[i] != nc && us[i])
