@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strjoin_alloca(char const *s1, char const *s2, void*(alloc)(size_t))
+char	*ft_strjoin_alloca(char const *s1, char const *s2, void*(*alloc)(size_t))
 {
 	char	*joined;
 	int		size_s1;
@@ -22,7 +22,7 @@ char	*ft_strjoin_alloca(char const *s1, char const *s2, void*(alloc)(size_t))
 		return (NULL);
 	size_s1 = ft_strlen((char *)s1);
 	size_s2 = ft_strlen((char *)s2);
-	joined = alloc(((size_s1 + size_s2) * sizeof(char)));
+	joined = alloc((size_s1 + size_s2 + 1) * sizeof(char));
 	if (!joined)
 		return (NULL);
 	ft_memcpy((char *)joined, s1, size_s1);

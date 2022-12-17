@@ -68,9 +68,9 @@ void	ft_lstclear(t_list **lst, void (*del) (void *));
 void	ft_lstiter(t_list *lst, void (*f) (void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
 char	*ft_strjoin_alloca(char const *s1, char const *s2, \
-		void*(alloc)(size_t));
-char	*ft_strdup_alloca(const char *src, void *(alloc)(size_t));
-t_list	*ft_lstnew_falloc(void *content, void *(*alloc)(size_t));
+		void*(*alloc)(size_t));
+char	*ft_strdup_alloca(const char *src, void *(*alloc)(size_t));
+t_list	*ft_lstnew_alloca(void *content, void *(*alloc)(size_t));
 t_list	*ft_lstremove(t_list **lst, t_list *node);
 
 #endif

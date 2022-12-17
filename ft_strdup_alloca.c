@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strdup_alloca(const char *src, void *(alloc)(size_t))
+char	*ft_strdup_alloca(const char *src, void *(*alloc)(size_t))
 {
 	int		i;
 	char	*n_str;

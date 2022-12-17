@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_list	*ft_lstnew_falloc(void *content, void *(*alloc)(size_t))
+t_list	*ft_lstnew_alloca(void *content, void *(*alloc)(size_t))
 {
 	t_list	*new_list;
 
