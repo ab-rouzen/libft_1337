@@ -6,7 +6,7 @@
 /*   By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 21:42:24 by arouzen           #+#    #+#             */
-/*   Updated: 2022/12/03 21:42:49 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/12/21 18:33:07 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin_alloca(char const *s1, char const *s2, void*(*alloc)(size_t))
 	int		size_s1;
 	int		size_s2;
 
-	if (!s1 || !s2)
+	if (!s1 && !s2)
 		return (NULL);
 	size_s1 = ft_strlen((char *)s1);
 	size_s2 = ft_strlen((char *)s2);
