@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+         #
+#    By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/27 14:16:42 by arouzen           #+#    #+#              #
-#    Updated: 2022/12/07 16:59:16 by arouzen          ###   ########.fr        #
+#    Updated: 2022/12/28 18:50:20 by arouzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ MAND_SRCS = ft_atoi.c ft_bzero.c ft_calloc.c \
 			ft_split.c ft_strjoin.c ft_strmapi.c \
 			ft_strtrim.c ft_substr.c \
 			ft_lstnew_alloca.c ft_strjoin_alloca.c \
-			ft_strdup_alloca.c
+			ft_strdup_alloca.c ft_itoa_alloca.c
+
 MAND_OBJS = $(MAND_SRCS:%.c=$(BUILD_DIR)%.o)
 BONU_SRCS = ft_lstnew.c ft_lstsize.c ft_lstadd_back.c \
 			ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \

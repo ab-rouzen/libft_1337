@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:04:42 by arouzen           #+#    #+#             */
-/*   Updated: 2022/12/07 17:00:14 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/12/28 18:45:55 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
+char	*ft_itoa_alloca(int n, void *(*alloc)(size_t));
 char	*ft_strmapi(const char *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 t_list	*ft_lstnew(void *content);

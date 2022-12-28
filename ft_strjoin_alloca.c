@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin_alloca.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arouzen <arouzen@student.42.fr>            +#+  +:+       +#+        */
+/*   By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 21:42:24 by arouzen           #+#    #+#             */
-/*   Updated: 2022/12/21 18:33:07 by arouzen          ###   ########.fr       */
+/*   Updated: 2022/12/29 00:39:41 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_alloca(char const *s1, char const *s2, void*(*alloc)(size_t))
+char	*ft_strjoin_alloca(\
+		char const *s1, char const *s2, void*(*alloc)(size_t))
 {
 	char	*joined;
 	int		size_s1;
