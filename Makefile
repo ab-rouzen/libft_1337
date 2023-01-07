@@ -6,7 +6,7 @@
 #    By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/27 14:16:42 by arouzen           #+#    #+#              #
-#    Updated: 2022/12/28 18:50:20 by arouzen          ###   ########.fr        #
+#    Updated: 2023/01/07 17:41:45 by arouzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ MAND_SRCS = ft_atoi.c ft_bzero.c ft_calloc.c \
 			ft_split.c ft_strjoin.c ft_strmapi.c \
 			ft_strtrim.c ft_substr.c \
 			ft_lstnew_alloca.c ft_strjoin_alloca.c \
-			ft_strdup_alloca.c ft_itoa_alloca.c
+			ft_strdup_alloca.c ft_itoa_alloca.c \
+			ft_parr_len.c ft_freesplit.c ft_isnum.c
 
 MAND_OBJS = $(MAND_SRCS:%.c=$(BUILD_DIR)%.o)
 BONU_SRCS = ft_lstnew.c ft_lstsize.c ft_lstadd_back.c \

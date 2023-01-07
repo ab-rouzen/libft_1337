@@ -6,7 +6,7 @@
 /*   By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:04:42 by arouzen           #+#    #+#             */
-/*   Updated: 2022/12/28 18:45:55 by arouzen          ###   ########.fr       */
+/*   Updated: 2023/01/07 18:26:00 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@
 # include <unistd.h>
 # define INT_MIN -2147483648
 # define INT_MAX 2147483647
+# define FALSE 0
+# define TRUE 1
+
+typedef int	t_bool;
 
 typedef struct s_list
 {
@@ -56,7 +60,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
-char	*ft_itoa_alloca(int n, void *(*alloc)(size_t));
 char	*ft_strmapi(const char *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 t_list	*ft_lstnew(void *content);
@@ -68,10 +71,22 @@ void	ft_lstdelone(t_list *lst, void (*del) (void *));
 void	ft_lstclear(t_list **lst, void (*del) (void *));
 void	ft_lstiter(t_list *lst, void (*f) (void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
+t_list	*ft_lstremove(t_list **lst, t_list *node);
+
+/*****************/
+
+char	*ft_itoa_alloca(int n, void *(*alloc)(size_t));
 char	*ft_strjoin_alloca(char const *s1, char const *s2, \
 		void*(*alloc)(size_t));
 char	*ft_strdup_alloca(const char *src, void *(*alloc)(size_t));
 t_list	*ft_lstnew_alloca(void *content, void *(*alloc)(size_t));
-t_list	*ft_lstremove(t_list **lst, t_list *node);
+/*returns the size of an array of pointer*/
+int		ft_parr_len(void *p);
+/*returns the size of pointers in a **char*/
+int		ft_chardp_len(char **ppchar);
+void	ft_freesplit(char **str);
+t_bool	ft_isnum(char *s);
+
+/*****************/
 
 #endif
