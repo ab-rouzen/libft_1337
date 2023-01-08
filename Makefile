@@ -6,7 +6,7 @@
 #    By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/27 14:16:42 by arouzen           #+#    #+#              #
-#    Updated: 2023/01/07 17:41:45 by arouzen          ###   ########.fr        #
+#    Updated: 2023/01/07 20:11:46 by arouzen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ AR = ar
 ARFLAGS = -rs
 CC = gcc
 LIB  = libft.a
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 
 
 all : $(NAME)

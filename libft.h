@@ -6,7 +6,7 @@
 /*   By: arouzen <arouzen@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 16:04:42 by arouzen           #+#    #+#             */
-/*   Updated: 2023/01/07 18:26:00 by arouzen          ###   ########.fr       */
+/*   Updated: 2023/01/08 12:52:52 by arouzen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr_fd(char *str, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putchar_fd(char c, int fd);
-size_t	ft_strlen(const char *str);
+int		ft_strlen(const char *str);
 void	ft_bzero(void *s, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
@@ -81,7 +81,7 @@ char	*ft_strjoin_alloca(char const *s1, char const *s2, \
 char	*ft_strdup_alloca(const char *src, void *(*alloc)(size_t));
 t_list	*ft_lstnew_alloca(void *content, void *(*alloc)(size_t));
 /*returns the size of an array of pointer*/
-int		ft_parr_len(void *p);
+int		ft_parr_len(char **p);
 /*returns the size of pointers in a **char*/
 int		ft_chardp_len(char **ppchar);
 void	ft_freesplit(char **str);
